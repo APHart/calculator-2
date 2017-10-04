@@ -43,3 +43,11 @@ while True:
         mod_result = mod(float(input_tokens[1]), float(input_tokens[2]))
         print mod_result
 
+    if input_tokens[0] == 'x+':
+        add_mult_result = add_mult(float(input_tokens[1]), float(input_tokens[2]), float(input_tokens[3]))
+        print add_mult_result
+
+    if input_tokens[0] == 'cubes+':
+        add_cubes_result = add_cubes(float(input_tokens[1]), float(input_tokens[2]))
+        print add_cubes_result
+
