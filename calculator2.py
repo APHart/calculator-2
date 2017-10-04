@@ -66,26 +66,26 @@ while True:
             cube_result = cube(float(input_tokens[1]))
             print cube_result
 
-        elif input_tokens[0] == 'pow':
-            pow_result = power(float(input_tokens[1]),
-                               float(input_tokens[2]))
-            print pow_result
+        # elif input_tokens[0] == 'pow':
+        #     pow_result = power(float(input_tokens[1]),
+        #                        float(input_tokens[2]))
+        #     print pow_result
 
-        elif input_tokens[0] == 'mod':
-            mod_result = mod(float(input_tokens[1]),
-                             float(input_tokens[2]))
-            print mod_result
+        # elif input_tokens[0] == 'mod':
+        #     mod_result = mod(float(input_tokens[1]),
+        #                      float(input_tokens[2]))
+        #     print mod_result
 
-        elif input_tokens[0] == 'x+':
-            add_mult_result = add_mult(float(input_tokens[1]),
-                                       float(input_tokens[2]),
-                                       float(input_tokens[3]))
-            print add_mult_result
+        # elif input_tokens[0] == 'x+':
+        #     add_mult_result = add_mult(float(input_tokens[1]),
+        #                                float(input_tokens[2]),
+        #                                float(input_tokens[3]))
+        #     print add_mult_result
 
-        elif input_tokens[0] == 'cubes+':
-            add_cubes_result = add_cubes(float(input_tokens[1]),
-                                         float(input_tokens[2]))
-            print add_cubes_result
+        # elif input_tokens[0] == 'cubes+':
+        #     add_cubes_result = add_cubes(float(input_tokens[1]),
+        #                                  float(input_tokens[2]))
+        #     print add_cubes_result
 
         elif user_input == "q":
             print "You will exit."

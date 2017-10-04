@@ -27,9 +27,15 @@ while True:
             continue
 
         if input_tokens[0] == '+':
-            add_result = add(float(input_tokens[1]),
-                             float(input_tokens[2]))
-            print add_result
+
+            if len(num_tokens) != 2:
+                print "Two numbers are required for this calculation."
+                continue
+
+            else:
+                add_result = add(float(input_tokens[1]),
+                                 float(input_tokens[2]))
+                print add_result
 
         elif input_tokens[0] == '-':
             sub_result = subtract(float(input_tokens[1]),
