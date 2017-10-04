@@ -14,58 +14,70 @@ operators = ["+", "-", "*", "/", "square",
 while True:
     user_input = raw_input('> ')
     input_tokens = user_input.split(' ')
+    num_tokens = input_tokens[1:]
 
     if input_tokens[0] in operators:
 
         try:
-
-            if input_tokens[0] == '+':
-                add_result = add(float(input_tokens[1]), float(input_tokens[2]))
-                print add_result
-
-            elif input_tokens[0] == '-':
-                sub_result = subtract(float(input_tokens[1]), float(input_tokens[2]))
-                print sub_result
-
-            elif input_tokens[0] == '*':
-                mult_result = multiply(float(input_tokens[1]), float(input_tokens[2]))
-                print mult_result
-
-            elif input_tokens[0] == '/':
-                div_result = divide(float(input_tokens[1]), float(input_tokens[2]))
-                print div_result
-
-            elif input_tokens[0] == 'square':
-                sq_result = square(float(input_tokens[1]))
-                print sq_result
-
-            elif input_tokens[0] == 'cube':
-                cube_result = cube(float(input_tokens[1]))
-                print cube_result
-
-            elif input_tokens[0] == 'pow':
-                pow_result = power(float(input_tokens[1]), float(input_tokens[2]))
-                print pow_result
-
-            elif input_tokens[0] == 'mod':
-                mod_result = mod(float(input_tokens[1]), float(input_tokens[2]))
-                print mod_result
-
-            elif input_tokens[0] == 'x+':
-                add_mult_result = add_mult(float(input_tokens[1]), float(input_tokens[2]), float(input_tokens[3]))
-                print add_mult_result
-
-            elif input_tokens[0] == 'cubes+':
-                add_cubes_result = add_cubes(float(input_tokens[1]), float(input_tokens[2]))
-                print add_cubes_result
-
-            elif user_input == "q":
-                print "You will exit."
-                break
+            for item in num_tokens:
+                float(item)
 
         except ValueError:
             print "Invalid input, numbers must be entered for calculations."
             continue
+
+        if input_tokens[0] == '+':
+            add_result = add(float(input_tokens[1]),
+                             float(input_tokens[2]))
+            print add_result
+
+        elif input_tokens[0] == '-':
+            sub_result = subtract(float(input_tokens[1]),
+                                  float(input_tokens[2]))
+            print sub_result
+
+        elif input_tokens[0] == '*':
+            mult_result = multiply(float(input_tokens[1]),
+                                   float(input_tokens[2]))
+            print mult_result
+
+        elif input_tokens[0] == '/':
+            div_result = divide(float(input_tokens[1]),
+                                float(input_tokens[2]))
+            print div_result
+
+        elif input_tokens[0] == 'square':
+            sq_result = square(float(input_tokens[1]))
+            print sq_result
+
+        elif input_tokens[0] == 'cube':
+            cube_result = cube(float(input_tokens[1]))
+            print cube_result
+
+        elif input_tokens[0] == 'pow':
+            pow_result = power(float(input_tokens[1]),
+                               float(input_tokens[2]))
+            print pow_result
+
+        elif input_tokens[0] == 'mod':
+            mod_result = mod(float(input_tokens[1]),
+                             float(input_tokens[2]))
+            print mod_result
+
+        elif input_tokens[0] == 'x+':
+            add_mult_result = add_mult(float(input_tokens[1]),
+                                       float(input_tokens[2]),
+                                       float(input_tokens[3]))
+            print add_mult_result
+
+        elif input_tokens[0] == 'cubes+':
+            add_cubes_result = add_cubes(float(input_tokens[1]),
+                                         float(input_tokens[2]))
+            print add_cubes_result
+
+        elif user_input == "q":
+            print "You will exit."
+            break
 
     else:
         print "Invalid input, please enter an operator or q to quit."
