@@ -26,3 +26,12 @@ while True:
     if input_tokens[0] == '/':
         div_result = divide(float(input_tokens[1]), float(input_tokens[2]))
         print div_result
+
+    if input_tokens[0] == 'square':
+        sq_result = square(float(input_tokens[1]))
+        print sq_result
+
+    if input_tokens[0] == 'cube':
+        cube_result = cube(float(input_tokens[1]))
+        print cube_result
+        
