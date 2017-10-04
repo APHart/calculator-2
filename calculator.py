@@ -6,7 +6,9 @@ calculator program yourself in this file.
 
 from arithmetic import *
 
-operators = ["+", "-", "*", "/", "square", "cube", "pow", "mod", "x+", "cubes+", "q"]
+operators = ["+", "-", "*", "/", "square",
+             "cube", "pow", "mod", "x+",
+             "cubes+", "q"]
 
 
 while True:
@@ -16,54 +18,54 @@ while True:
     if input_tokens[0] in operators:
 
         try:
-            
+
             if input_tokens[0] == '+':
                 add_result = add(float(input_tokens[1]), float(input_tokens[2]))
                 print add_result
 
-            if input_tokens[0] == '-':
+            elif input_tokens[0] == '-':
                 sub_result = subtract(float(input_tokens[1]), float(input_tokens[2]))
                 print sub_result
 
-            if input_tokens[0] == '*':
+            elif input_tokens[0] == '*':
                 mult_result = multiply(float(input_tokens[1]), float(input_tokens[2]))
                 print mult_result
 
-            if input_tokens[0] == '/':
+            elif input_tokens[0] == '/':
                 div_result = divide(float(input_tokens[1]), float(input_tokens[2]))
                 print div_result
 
-            if input_tokens[0] == 'square':
+            elif input_tokens[0] == 'square':
                 sq_result = square(float(input_tokens[1]))
                 print sq_result
 
-            if input_tokens[0] == 'cube':
+            elif input_tokens[0] == 'cube':
                 cube_result = cube(float(input_tokens[1]))
                 print cube_result
 
-            if input_tokens[0] == 'pow':
+            elif input_tokens[0] == 'pow':
                 pow_result = power(float(input_tokens[1]), float(input_tokens[2]))
                 print pow_result
 
-            if input_tokens[0] == 'mod':
+            elif input_tokens[0] == 'mod':
                 mod_result = mod(float(input_tokens[1]), float(input_tokens[2]))
                 print mod_result
 
-            if input_tokens[0] == 'x+':
+            elif input_tokens[0] == 'x+':
                 add_mult_result = add_mult(float(input_tokens[1]), float(input_tokens[2]), float(input_tokens[3]))
                 print add_mult_result
 
-            if input_tokens[0] == 'cubes+':
+            elif input_tokens[0] == 'cubes+':
                 add_cubes_result = add_cubes(float(input_tokens[1]), float(input_tokens[2]))
                 print add_cubes_result
 
-            if user_input == "q":
+            elif user_input == "q":
                 print "You will exit."
                 break
 
         except ValueError:
             print "Invalid input, numbers must be entered for calculations."
             continue
-      
+
     else:
         print "Invalid input, please enter an operator or q to quit."
