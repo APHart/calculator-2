@@ -34,4 +34,12 @@ while True:
     if input_tokens[0] == 'cube':
         cube_result = cube(float(input_tokens[1]))
         print cube_result
-        
+
+    if input_tokens[0] == 'pow':
+        pow_result = power(float(input_tokens[1]), float(input_tokens[2]))
+        print pow_result
+
+    if input_tokens[0] == 'mod':
+        mod_result = mod(float(input_tokens[1]), float(input_tokens[2]))
+        print mod_result
+
